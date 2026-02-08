@@ -137,12 +137,13 @@
     <section class="hero-section">
         <div class="container">
             <h1>Welcome to ShareLocal</h1>
-            <p>Buy and sell items locally. Connect with your community.</p>
+            <p>Buy, sell, give away and borrow items locally. Connect with your community.</p>
             {% if user.is_authenticated %}
-                <a href="{% url 'profile' %}" class="btn-primary-custom">View Your Profile</a>
+                <a href="{% url 'item_list' %}" class="btn-primary-custom">Browse Items</a>
+                <a href="{% url 'profile' %}" class="btn-secondary-custom">My Profile</a>
             {% else %}
                 <a href="{% url 'register' %}" class="btn-primary-custom">Get Started</a>
-                <a href="{% url 'login' %}" class="btn-secondary-custom">Login</a>
+                <a href="{% url 'item_list' %}" class="btn-secondary-custom">Browse Items</a>
             {% endif %}
         </div>
     </section>
